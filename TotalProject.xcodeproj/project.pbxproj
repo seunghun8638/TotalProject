@@ -13,6 +13,8 @@
 		E6E32CDA2625D2B600013091 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6E32CD82625D2B600013091 /* Main.storyboard */; };
 		E6E32CDC2625D2B900013091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6E32CDB2625D2B900013091 /* Assets.xcassets */; };
 		E6E32CDF2625D2B900013091 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6E32CDD2625D2B900013091 /* LaunchScreen.storyboard */; };
+		E6E32CE82625D2CD00013091 /* BountyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CE72625D2CD00013091 /* BountyViewController.swift */; };
+		E6E32CEB2625D2EF00013091 /* musicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CEA2625D2EF00013091 /* musicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E6E32CDB2625D2B900013091 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6E32CDE2625D2B900013091 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6E32CE02625D2B900013091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6E32CE72625D2CD00013091 /* BountyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BountyViewController.swift; sourceTree = "<group>"; };
+		E6E32CEA2625D2EF00013091 /* musicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				E6E32CD22625D2B600013091 /* AppDelegate.swift */,
 				E6E32CD42625D2B600013091 /* SceneDelegate.swift */,
 				E6E32CD62625D2B600013091 /* ViewController.swift */,
+				E6E32CEA2625D2EF00013091 /* musicViewController.swift */,
+				E6E32CE72625D2CD00013091 /* BountyViewController.swift */,
 				E6E32CD82625D2B600013091 /* Main.storyboard */,
 				E6E32CDB2625D2B900013091 /* Assets.xcassets */,
 				E6E32CDD2625D2B900013091 /* LaunchScreen.storyboard */,
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6E32CD72625D2B600013091 /* ViewController.swift in Sources */,
+				E6E32CE82625D2CD00013091 /* BountyViewController.swift in Sources */,
+				E6E32CEB2625D2EF00013091 /* musicViewController.swift in Sources */,
 				E6E32CD32625D2B600013091 /* AppDelegate.swift in Sources */,
 				E6E32CD52625D2B600013091 /* SceneDelegate.swift in Sources */,
 			);
