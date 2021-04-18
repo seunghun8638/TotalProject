@@ -275,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnS-Wm-9uR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3944.9275362318845" y="1024.5535714285713"/>
+            <point key="canvasLocation" x="3193" y="988"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="878-fK-3fK">
@@ -305,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49s-JP-yow" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3230" y="1681"/>
+            <point key="canvasLocation" x="3193" y="1681"/>
         </scene>
         <!--Hobby Detail View-->
         <scene sceneID="xoF-Fx-84f">
@@ -346,7 +346,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tB1-Fz-mYi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4711.594202898551" y="1024.5535714285713"/>
+            <point key="canvasLocation" x="4000" y="988"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="I2g-kn-ZU5">
@@ -392,7 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yur-z7-4ak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3192.753623188406" y="1024.5535714285713"/>
+            <point key="canvasLocation" x="3193" y="292"/>
         </scene>
     </scenes>
     <resources>
