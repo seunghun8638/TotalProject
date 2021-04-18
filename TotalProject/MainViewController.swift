@@ -27,4 +27,9 @@ class MainViewController: UIViewController {
         guard let name = self.storyboard?.instantiateViewController(identifier: "hobbyControllerView") as? hobbyControllerView else {return}
         self.navigationController?.pushViewController(name, animated: true)
     }
+    @IBAction func CalendarBtn(_ sender: Any) {
+        guard let calendar  = self.storyboard?.instantiateViewController(identifier: "CalendarViewController") as? CalendarViewController else {return}
+        self.navigationController?.pushViewController(calendar, animated: true)
+    }
+    
 }

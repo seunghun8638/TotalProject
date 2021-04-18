@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		937CCD7E7D23D456D18A7FD9 /* Pods_TotalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41DC43881B596CD36F1E357F /* Pods_TotalProject.framework */; };
 		E6E32CD32625D2B600013091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CD22625D2B600013091 /* AppDelegate.swift */; };
 		E6E32CD52625D2B600013091 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CD42625D2B600013091 /* SceneDelegate.swift */; };
 		E6E32CD72625D2B600013091 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CD62625D2B600013091 /* ViewController.swift */; };
@@ -17,9 +18,13 @@
 		E6E32CF42628543300013091 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CF32628543300013091 /* profileViewController.swift */; };
 		E6E32D002628622500013091 /* hobbyControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CFF2628622500013091 /* hobbyControllerView.swift */; };
 		E6E32D07262869C400013091 /* hobbyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32D06262869C400013091 /* hobbyDetailView.swift */; };
+		E6E32D0A262BBF1400013091 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32D09262BBF1400013091 /* CalendarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BF47D603800873438CFD7C8 /* Pods-TotalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TotalProject.release.xcconfig"; path = "Target Support Files/Pods-TotalProject/Pods-TotalProject.release.xcconfig"; sourceTree = "<group>"; };
+		41DC43881B596CD36F1E357F /* Pods_TotalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TotalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92FD1212CDAB432D4CAAD116 /* Pods-TotalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TotalProject.debug.xcconfig"; path = "Target Support Files/Pods-TotalProject/Pods-TotalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		E6E32CCF2625D2B600013091 /* TotalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TotalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E32CD22625D2B600013091 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6E32CD42625D2B600013091 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +37,7 @@
 		E6E32CF32628543300013091 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		E6E32CFF2628622500013091 /* hobbyControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = hobbyControllerView.swift; path = ../../../Documents/hobbyControllerView.swift; sourceTree = "<group>"; };
 		E6E32D06262869C400013091 /* hobbyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hobbyDetailView.swift; sourceTree = "<group>"; };
+		E6E32D09262BBF1400013091 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +45,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				937CCD7E7D23D456D18A7FD9 /* Pods_TotalProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1815808FDDF67C37488E7F1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41DC43881B596CD36F1E357F /* Pods_TotalProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9856964541A7547CF7AF92CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92FD1212CDAB432D4CAAD116 /* Pods-TotalProject.debug.xcconfig */,
+				0BF47D603800873438CFD7C8 /* Pods-TotalProject.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E6E32CC62625D2B600013091 = {
 			isa = PBXGroup;
 			children = (
 				E6E32CD12625D2B600013091 /* TotalProject */,
 				E6E32CD02625D2B600013091 /* Products */,
+				9856964541A7547CF7AF92CF /* Pods */,
+				1815808FDDF67C37488E7F1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +94,7 @@
 				E6E32CD22625D2B600013091 /* AppDelegate.swift */,
 				E6E32CD42625D2B600013091 /* SceneDelegate.swift */,
 				E6E32CD82625D2B600013091 /* Main.storyboard */,
+				E6E32D09262BBF1400013091 /* CalendarViewController.swift */,
 				E6E32CF32628543300013091 /* profileViewController.swift */,
 				E6E32CF02627190C00013091 /* MainViewController.swift */,
 				E6E32CD62625D2B600013091 /* ViewController.swift */,
@@ -86,9 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6E32CE32625D2B900013091 /* Build configuration list for PBXNativeTarget "TotalProject" */;
 			buildPhases = (
+				93C324FF0414C1A65A7E9A5D /* [CP] Check Pods Manifest.lock */,
 				E6E32CCB2625D2B600013091 /* Sources */,
 				E6E32CCC2625D2B600013091 /* Frameworks */,
 				E6E32CCD2625D2B600013091 /* Resources */,
+				0FFB6C60675338247F5F8643 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,11 +174,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FFB6C60675338247F5F8643 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TotalProject/Pods-TotalProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TotalProject/Pods-TotalProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TotalProject/Pods-TotalProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93C324FF0414C1A65A7E9A5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TotalProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E6E32CCB2625D2B600013091 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6E32D0A262BBF1400013091 /* CalendarViewController.swift in Sources */,
 				E6E32D002628622500013091 /* hobbyControllerView.swift in Sources */,
 				E6E32CD72625D2B600013091 /* ViewController.swift in Sources */,
 				E6E32CD32625D2B600013091 /* AppDelegate.swift in Sources */,
@@ -299,6 +372,7 @@
 		};
 		E6E32CE42625D2B900013091 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92FD1212CDAB432D4CAAD116 /* Pods-TotalProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -317,6 +391,7 @@
 		};
 		E6E32CE52625D2B900013091 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BF47D603800873438CFD7C8 /* Pods-TotalProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

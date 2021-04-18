@@ -1,0 +1,6 @@
+framework module Pods_TotalProject {
+  umbrella header "Pods-TotalProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
