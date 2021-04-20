@@ -15,12 +15,12 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.HelloLabel.text = "  Hello!  " + helloText
+
     }
   
     @IBAction func profileBtn(_ sender: Any) {
         guard let profileBtn = self.storyboard?.instantiateViewController(identifier: "profileViewController") as? profileViewController else {return}
+        
         self.navigationController?.pushViewController(profileBtn, animated: true)
     }
     @IBAction func hobbyBtn(_ sender: Any) {
@@ -31,5 +31,10 @@ class MainViewController: UIViewController {
         guard let calendar  = self.storyboard?.instantiateViewController(identifier: "CalendarViewController") as? CalendarViewController else {return}
         self.navigationController?.pushViewController(calendar, animated: true)
     }
-    
+    @IBAction func WeatherBtn(_ sender: Any){
+        guard let weather  = self.storyboard?.instantiateViewController(identifier: "GPSViewController") as? GPSViewController else {return}
+        self.navigationController?.pushViewController(weather, animated: true)
+    }
 }
+
+

@@ -33,6 +33,7 @@ class profileViewController: UIViewController {
         nameLabel.transform = CGAffineTransform(translationX: view.bounds.width, y: 0).scaledBy(x: 3, y: 3).rotated(by: 180)
         jobLabel.transform = CGAffineTransform(translationX: view.bounds.width, y: 0).scaledBy(x: 3, y: 3).rotated(by: 180)
         
+        
         nameLabel.alpha = 0
         jobLabel.alpha = 0
     }
@@ -47,5 +48,7 @@ class profileViewController: UIViewController {
             self.jobLabel.transform = CGAffineTransform.identity
             self.jobLabel.alpha = 1
                 }, completion: nil)
+        
+        UIView.transition(with: imgProfile, duration: 0.4, options: .transitionFlipFromLeft, animations: nil, completion: nil)
     }
 }

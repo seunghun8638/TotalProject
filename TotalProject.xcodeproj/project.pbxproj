@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		937CCD7E7D23D456D18A7FD9 /* Pods_TotalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41DC43881B596CD36F1E357F /* Pods_TotalProject.framework */; };
+		E66282BA262EF5BE00FABAA1 /* GPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66282B9262EF5BE00FABAA1 /* GPSViewController.swift */; };
 		E6E32CD32625D2B600013091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CD22625D2B600013091 /* AppDelegate.swift */; };
 		E6E32CD52625D2B600013091 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CD42625D2B600013091 /* SceneDelegate.swift */; };
 		E6E32CD72625D2B600013091 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CD62625D2B600013091 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 		0BF47D603800873438CFD7C8 /* Pods-TotalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TotalProject.release.xcconfig"; path = "Target Support Files/Pods-TotalProject/Pods-TotalProject.release.xcconfig"; sourceTree = "<group>"; };
 		41DC43881B596CD36F1E357F /* Pods_TotalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TotalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92FD1212CDAB432D4CAAD116 /* Pods-TotalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TotalProject.debug.xcconfig"; path = "Target Support Files/Pods-TotalProject/Pods-TotalProject.debug.xcconfig"; sourceTree = "<group>"; };
+		E66282B9262EF5BE00FABAA1 /* GPSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSViewController.swift; sourceTree = "<group>"; };
 		E6E32CCF2625D2B600013091 /* TotalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TotalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E32CD22625D2B600013091 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6E32CD42625D2B600013091 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +68,6 @@
 				92FD1212CDAB432D4CAAD116 /* Pods-TotalProject.debug.xcconfig */,
 				0BF47D603800873438CFD7C8 /* Pods-TotalProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -94,6 +95,7 @@
 				E6E32CD22625D2B600013091 /* AppDelegate.swift */,
 				E6E32CD42625D2B600013091 /* SceneDelegate.swift */,
 				E6E32CD82625D2B600013091 /* Main.storyboard */,
+				E66282B9262EF5BE00FABAA1 /* GPSViewController.swift */,
 				E6E32D09262BBF1400013091 /* CalendarViewController.swift */,
 				E6E32CF32628543300013091 /* profileViewController.swift */,
 				E6E32CF02627190C00013091 /* MainViewController.swift */,
@@ -222,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6E32D0A262BBF1400013091 /* CalendarViewController.swift in Sources */,
+				E66282BA262EF5BE00FABAA1 /* GPSViewController.swift in Sources */,
 				E6E32D002628622500013091 /* hobbyControllerView.swift in Sources */,
 				E6E32CD72625D2B600013091 /* ViewController.swift in Sources */,
 				E6E32CD32625D2B600013091 /* AppDelegate.swift in Sources */,
