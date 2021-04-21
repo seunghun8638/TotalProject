@@ -8,12 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+
+  
     @IBOutlet weak var nameLabel: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        self.navigationItem.title = "Basis View"
+        self.navigationItem.backButtonTitle = "Back"
     }
 
     @IBAction func SendBtn(_ sender: Any) {

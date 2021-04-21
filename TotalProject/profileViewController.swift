@@ -9,6 +9,7 @@ import UIKit
 
 class profileViewController: UIViewController {
 
+    
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var jobLabel: UILabel!
@@ -17,6 +18,9 @@ class profileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Profile View"
+        self.navigationItem.backButtonTitle = "Back"
+        
         imgProfile.image = img
         prepareAnimation()
     }

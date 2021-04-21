@@ -16,6 +16,9 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Calendar View"
+        self.navigationItem.backButtonTitle = "Back"
+        
         calendar.delegate = self
         calendar.dataSource = self
         calendar.scrollDirection = .vertical

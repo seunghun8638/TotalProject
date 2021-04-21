@@ -11,7 +11,8 @@ class hobbyDetailView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "Detail View"
+        self.navigationItem.backButtonTitle = "Back"
         // Do any additional setup after loading the view.
     }
     
