@@ -19,8 +19,9 @@ class MainViewController: UIViewController {
         self.navigationItem.backButtonTitle = "Back"
         
         HelloLabel.text = "Hello! \(helloText!)"
-    }
-  
+        
+    }    
+    
     @IBAction func profileBtn(_ sender: Any) {
         guard let profileBtn = self.storyboard?.instantiateViewController(identifier: "profileViewController") as? profileViewController else {return}
         self.navigationController?.pushViewController(profileBtn, animated: true)
@@ -37,6 +38,11 @@ class MainViewController: UIViewController {
         guard let weather  = self.storyboard?.instantiateViewController(identifier: "GPSViewController") as? GPSViewController else {return}
         self.navigationController?.pushViewController(weather, animated: true)
     }
+    @IBAction func MusicBtn(_ sender: Any) {
+        guard let music = self.storyboard?.instantiateViewController(identifier: "MusicViewController") as? MusicViewController else{return}
+        self.navigationController?.pushViewController(music, animated: true)
+    }
+    
 }
 
 
