@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -209,24 +208,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tabBar tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhe-kd-ObR">
-                                <rect key="frame" x="0.0" y="775" width="414" height="121"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem title="Profile" image="doc.fill" catalog="system" id="KLu-cT-V7j"/>
-                                    <tabBarItem title="Hobby" image="heart.fill" catalog="system" id="fZu-NY-qsF"/>
-                                    <tabBarItem title="Home" id="5bI-J2-WTk">
-                                        <imageReference key="image" image="paperplane.fill" catalog="system" symbolScale="large"/>
-                                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="4"/>
-                                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="6" maxX="0.0" maxY="0.0"/>
-                                    </tabBarItem>
-                                    <tabBarItem title="Map" image="map" catalog="system" id="x5i-Tf-Qx4"/>
-                                    <tabBarItem title="Music" image="music.note" catalog="system" id="w78-mk-P16"/>
-                                </items>
-                                <connections>
-                                    <outlet property="delegate" destination="5bI-J2-WTk" id="b11-lb-Ewx"/>
-                                </connections>
-                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="def-Wn-C85"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -235,13 +216,11 @@
                             <constraint firstItem="UOF-0o-nvB" firstAttribute="top" secondItem="def-Wn-C85" secondAttribute="top" constant="40" id="3iO-3C-FVH"/>
                             <constraint firstItem="def-Wn-C85" firstAttribute="trailing" secondItem="CT1-Bo-uro" secondAttribute="trailing" constant="95" id="4Fd-q6-Ud6"/>
                             <constraint firstItem="jGV-XA-Gjo" firstAttribute="leading" secondItem="def-Wn-C85" secondAttribute="leading" constant="45" id="4Mi-fU-nWs"/>
-                            <constraint firstAttribute="bottom" secondItem="hhe-kd-ObR" secondAttribute="bottom" id="5Ks-Kj-Hu0"/>
                             <constraint firstItem="def-Wn-C85" firstAttribute="trailing" secondItem="9ll-dC-pnK" secondAttribute="trailing" constant="90" id="PSO-3N-FJF"/>
                             <constraint firstItem="nig-D0-8zz" firstAttribute="leading" secondItem="def-Wn-C85" secondAttribute="leading" constant="47" id="RYv-Ul-Qm5"/>
                             <constraint firstItem="def-Wn-C85" firstAttribute="trailing" secondItem="3lA-RX-77N" secondAttribute="trailing" constant="155" id="TIk-gv-Op9"/>
                             <constraint firstItem="y0F-mU-1EH" firstAttribute="leading" secondItem="def-Wn-C85" secondAttribute="leading" constant="80" id="TSh-yF-4wR"/>
                             <constraint firstItem="3lA-RX-77N" firstAttribute="leading" secondItem="def-Wn-C85" secondAttribute="leading" constant="158" id="TeL-Ge-ym4"/>
-                            <constraint firstItem="hhe-kd-ObR" firstAttribute="top" secondItem="nig-D0-8zz" secondAttribute="bottom" constant="300" id="Uxx-CU-UqS"/>
                             <constraint firstItem="aGa-qK-wtN" firstAttribute="leading" secondItem="def-Wn-C85" secondAttribute="leading" constant="300" id="aVV-I2-Asc"/>
                             <constraint firstItem="3lA-RX-77N" firstAttribute="top" secondItem="def-Wn-C85" secondAttribute="top" constant="410" id="ahZ-c2-VDh"/>
                             <constraint firstItem="CT1-Bo-uro" firstAttribute="centerY" secondItem="Bom-rw-jrE" secondAttribute="centerY" id="eXb-o2-IUx"/>
@@ -249,13 +228,11 @@
                             <constraint firstItem="nig-D0-8zz" firstAttribute="top" secondItem="def-Wn-C85" secondAttribute="top" constant="410" id="j41-7D-Ofi"/>
                             <constraint firstItem="def-Wn-C85" firstAttribute="trailing" secondItem="2da-Ao-iwb" secondAttribute="trailing" constant="7" id="lOz-yI-0x2"/>
                             <constraint firstItem="Bom-rw-jrE" firstAttribute="top" secondItem="y0F-mU-1EH" secondAttribute="bottom" constant="-4" id="mHL-CH-pho"/>
-                            <constraint firstItem="hhe-kd-ObR" firstAttribute="leading" secondItem="def-Wn-C85" secondAttribute="leading" id="mlG-NC-PMf"/>
                             <constraint firstItem="hqE-bx-8tk" firstAttribute="top" secondItem="def-Wn-C85" secondAttribute="top" constant="350" id="pBg-1t-bIG"/>
                             <constraint firstItem="UOF-0o-nvB" firstAttribute="leading" secondItem="def-Wn-C85" secondAttribute="leading" constant="59" id="pZL-9W-04a"/>
                             <constraint firstItem="Bom-rw-jrE" firstAttribute="leading" secondItem="def-Wn-C85" secondAttribute="leading" constant="106" id="pd9-Gm-qR8"/>
                             <constraint firstItem="2da-Ao-iwb" firstAttribute="top" secondItem="def-Wn-C85" secondAttribute="top" constant="349" id="plO-tB-pKt"/>
                             <constraint firstItem="jGV-XA-Gjo" firstAttribute="top" secondItem="def-Wn-C85" secondAttribute="top" constant="350" id="r3o-zI-HRi"/>
-                            <constraint firstAttribute="trailing" secondItem="hhe-kd-ObR" secondAttribute="trailing" id="s8P-nh-2Ih"/>
                             <constraint firstItem="9ll-dC-pnK" firstAttribute="centerY" secondItem="y0F-mU-1EH" secondAttribute="centerY" id="s9W-bI-9KT"/>
                             <constraint firstItem="def-Wn-C85" firstAttribute="trailing" secondItem="hqE-bx-8tk" secondAttribute="trailing" constant="140" id="u7u-d1-PBp"/>
                             <constraint firstItem="def-Wn-C85" firstAttribute="trailing" secondItem="UOF-0o-nvB" secondAttribute="trailing" constant="50" id="yJa-Mb-rO7"/>
@@ -442,7 +419,7 @@
         <!--Music View Controller-->
         <scene sceneID="b4T-Qd-h5l">
             <objects>
-                <viewController storyboardIdentifier="MusicViewController" id="3vl-y7-B7q" customClass="MusicViewController" customModule="TotalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="musicViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3vl-y7-B7q" customClass="musicViewController" customModule="TotalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S8z-Ni-rYX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -459,28 +436,31 @@
                                     <constraint firstAttribute="width" secondItem="MME-9y-HWv" secondAttribute="height" multiplier="200:200" id="Gdn-UR-KDW"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IC-e1-gl0">
-                                <rect key="frame" x="85" y="609" width="46" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ri9-Db-apE">
-                                <rect key="frame" x="289" y="609" width="46" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQr-A0-PVQ">
-                                <rect key="frame" x="259" y="651" width="32" height="30"/>
-                                <state key="normal" title="Stop"/>
+                                <rect key="frame" x="230" y="633" width="61" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopBtn:" destination="3vl-y7-B7q" eventType="touchUpInside" id="woc-sH-5K4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRa-FH-rtt">
-                                <rect key="frame" x="139" y="651" width="34" height="30"/>
-                                <state key="normal" title="Start"/>
+                                <rect key="frame" x="139" y="633" width="55" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="playStartBtn:" destination="3vl-y7-B7q" eventType="touchUpInside" id="9Wm-sW-dCp"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pNd-fz-fLN">
                                 <rect key="frame" x="83" y="712" width="254" height="31"/>
+                                <connections>
+                                    <action selector="volumeChangeBtn:" destination="3vl-y7-B7q" eventType="valueChanged" id="u2W-WO-qFT"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qlg-0K-wGO">
                                 <rect key="frame" x="100" y="763" width="214" height="21"/>
@@ -488,21 +468,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="o11-gK-kzh">
-                                <rect key="frame" x="85" y="604" width="250" height="4"/>
-                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eVR-4A-yYw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eVR-4A-yYw" firstAttribute="bottom" secondItem="o11-gK-kzh" secondAttribute="bottom" constant="254" id="1Wq-hX-raV"/>
-                            <constraint firstItem="6IC-e1-gl0" firstAttribute="leading" secondItem="eVR-4A-yYw" secondAttribute="leading" constant="85" id="2Bs-ry-1qU"/>
                             <constraint firstItem="pNd-fz-fLN" firstAttribute="centerX" secondItem="MME-9y-HWv" secondAttribute="centerX" constant="72" id="2WO-qh-P1h"/>
-                            <constraint firstItem="eVR-4A-yYw" firstAttribute="trailing" secondItem="o11-gK-kzh" secondAttribute="trailing" constant="79" id="Cc7-uG-Rq4"/>
                             <constraint firstItem="mRa-FH-rtt" firstAttribute="leading" secondItem="eVR-4A-yYw" secondAttribute="leading" constant="139" id="Dex-Uo-c45"/>
-                            <constraint firstItem="Ri9-Db-apE" firstAttribute="top" secondItem="o11-gK-kzh" secondAttribute="top" constant="5" id="FLb-FU-dfq"/>
                             <constraint firstItem="D9J-of-wl7" firstAttribute="leading" secondItem="eVR-4A-yYw" secondAttribute="leading" constant="100" id="GTs-or-jpe"/>
-                            <constraint firstItem="6IC-e1-gl0" firstAttribute="top" secondItem="o11-gK-kzh" secondAttribute="top" constant="5" id="HBM-eI-F2X"/>
                             <constraint firstItem="eVR-4A-yYw" firstAttribute="bottom" secondItem="Qlg-0K-wGO" secondAttribute="bottom" constant="78" id="I9d-mc-Egy"/>
                             <constraint firstItem="Qlg-0K-wGO" firstAttribute="leading" secondItem="eVR-4A-yYw" secondAttribute="leading" constant="100" id="IJH-Jf-6SZ"/>
                             <constraint firstItem="eVR-4A-yYw" firstAttribute="trailing" secondItem="NQr-A0-PVQ" secondAttribute="trailing" constant="123" id="Ihd-ys-iBS"/>
@@ -511,19 +483,20 @@
                             <constraint firstItem="MME-9y-HWv" firstAttribute="top" secondItem="eVR-4A-yYw" secondAttribute="top" constant="74" id="ODb-Da-A8i"/>
                             <constraint firstItem="eVR-4A-yYw" firstAttribute="trailing" secondItem="D9J-of-wl7" secondAttribute="trailing" constant="100" id="Oii-CJ-l0d"/>
                             <constraint firstItem="Qlg-0K-wGO" firstAttribute="centerX" secondItem="pNd-fz-fLN" secondAttribute="centerX" id="QlT-zV-rMB"/>
-                            <constraint firstItem="eVR-4A-yYw" firstAttribute="trailing" secondItem="Ri9-Db-apE" secondAttribute="trailing" constant="79" id="XzQ-4g-cav"/>
                             <constraint firstItem="eVR-4A-yYw" firstAttribute="trailing" secondItem="pNd-fz-fLN" secondAttribute="trailing" constant="79" id="ce9-GW-btc"/>
                             <constraint firstItem="D9J-of-wl7" firstAttribute="top" secondItem="eVR-4A-yYw" secondAttribute="top" constant="23" id="fH3-jg-h5O"/>
                             <constraint firstItem="eVR-4A-yYw" firstAttribute="bottom" secondItem="pNd-fz-fLN" secondAttribute="bottom" constant="120" id="hYm-Qg-tWC"/>
                             <constraint firstItem="pNd-fz-fLN" firstAttribute="leading" secondItem="eVR-4A-yYw" secondAttribute="leading" constant="85" id="iFu-t0-JkI"/>
                             <constraint firstItem="eVR-4A-yYw" firstAttribute="trailing" secondItem="MME-9y-HWv" secondAttribute="trailing" constant="31" id="jtS-Hp-aRL"/>
                             <constraint firstItem="eVR-4A-yYw" firstAttribute="bottom" secondItem="NQr-A0-PVQ" secondAttribute="bottom" constant="181" id="oIY-Q4-ARN"/>
-                            <constraint firstItem="o11-gK-kzh" firstAttribute="leading" secondItem="eVR-4A-yYw" secondAttribute="leading" constant="85" id="rEp-ua-wi5"/>
                             <constraint firstItem="MME-9y-HWv" firstAttribute="leading" secondItem="eVR-4A-yYw" secondAttribute="leading" constant="37" id="vOg-yv-3dJ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="AlbumImg" destination="MME-9y-HWv" id="4fP-W5-i5t"/>
+                        <outlet property="startBtn" destination="mRa-FH-rtt" id="yX8-mL-lh8"/>
+                        <outlet property="stopBtn" destination="NQr-A0-PVQ" id="Mmq-TW-CyW"/>
+                        <outlet property="volumeChange" destination="pNd-fz-fLN" id="bpx-Wb-eX7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJN-Ka-rkJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -652,10 +625,8 @@
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="close_ic" width="128" height="128"/>
         <image name="doc.fill" catalog="system" width="115" height="128"/>
-        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="music.note" catalog="system" width="97" height="128"/>
-        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

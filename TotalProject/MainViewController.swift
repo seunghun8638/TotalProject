@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController,UITabBarControllerDelegate{
 
     @IBOutlet weak var HelloLabel: UILabel!
     
@@ -19,8 +19,10 @@ class MainViewController: UIViewController {
         self.navigationItem.backButtonTitle = "Back"
         
         HelloLabel.text = "Hello! \(helloText!)"
-        
-    }    
+    
+    }
+
+ 
     
     @IBAction func profileBtn(_ sender: Any) {
         guard let profileBtn = self.storyboard?.instantiateViewController(identifier: "profileViewController") as? profileViewController else {return}
@@ -39,10 +41,8 @@ class MainViewController: UIViewController {
         self.navigationController?.pushViewController(weather, animated: true)
     }
     @IBAction func MusicBtn(_ sender: Any) {
-        guard let music = self.storyboard?.instantiateViewController(identifier: "MusicViewController") as? MusicViewController else{return}
+        guard let music = self.storyboard?.instantiateViewController(identifier: "musicViewController") as? musicViewController else{return}
         self.navigationController?.pushViewController(music, animated: true)
     }
     
 }
-
-

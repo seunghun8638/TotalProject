@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		937CCD7E7D23D456D18A7FD9 /* Pods_TotalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41DC43881B596CD36F1E357F /* Pods_TotalProject.framework */; };
 		E66282BA262EF5BE00FABAA1 /* GPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66282B9262EF5BE00FABAA1 /* GPSViewController.swift */; };
-		E66282C62631992400FABAA1 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66282C52631992400FABAA1 /* MusicViewController.swift */; };
+		E66282C62631992400FABAA1 /* musicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66282C52631992400FABAA1 /* musicViewController.swift */; };
 		E66282C92631A1AF00FABAA1 /* ProfileDeatilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66282C82631A1AF00FABAA1 /* ProfileDeatilViewController.swift */; };
+		E66282CD2633FE7200FABAA1 /* Glow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E66282CC2633FE7200FABAA1 /* Glow.mp3 */; };
 		E6E32CD32625D2B600013091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CD22625D2B600013091 /* AppDelegate.swift */; };
 		E6E32CD52625D2B600013091 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CD42625D2B600013091 /* SceneDelegate.swift */; };
 		E6E32CD72625D2B600013091 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CD62625D2B600013091 /* ViewController.swift */; };
@@ -29,8 +30,9 @@
 		41DC43881B596CD36F1E357F /* Pods_TotalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TotalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92FD1212CDAB432D4CAAD116 /* Pods-TotalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TotalProject.debug.xcconfig"; path = "Target Support Files/Pods-TotalProject/Pods-TotalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		E66282B9262EF5BE00FABAA1 /* GPSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSViewController.swift; sourceTree = "<group>"; };
-		E66282C52631992400FABAA1 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		E66282C52631992400FABAA1 /* musicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicViewController.swift; sourceTree = "<group>"; };
 		E66282C82631A1AF00FABAA1 /* ProfileDeatilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeatilViewController.swift; sourceTree = "<group>"; };
+		E66282CC2633FE7200FABAA1 /* Glow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Glow.mp3; sourceTree = "<group>"; };
 		E6E32CCF2625D2B600013091 /* TotalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TotalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E32CD22625D2B600013091 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6E32CD42625D2B600013091 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		E6E32CD12625D2B600013091 /* TotalProject */ = {
 			isa = PBXGroup;
 			children = (
+				E66282CC2633FE7200FABAA1 /* Glow.mp3 */,
 				E6E32CD22625D2B600013091 /* AppDelegate.swift */,
 				E6E32CD42625D2B600013091 /* SceneDelegate.swift */,
 				E6E32CD82625D2B600013091 /* Main.storyboard */,
@@ -106,7 +109,7 @@
 				E6E32CF02627190C00013091 /* MainViewController.swift */,
 				E6E32CD62625D2B600013091 /* ViewController.swift */,
 				E6E32CFF2628622500013091 /* hobbyControllerView.swift */,
-				E66282C52631992400FABAA1 /* MusicViewController.swift */,
+				E66282C52631992400FABAA1 /* musicViewController.swift */,
 				E6E32D06262869C400013091 /* hobbyDetailView.swift */,
 				E6E32CDB2625D2B900013091 /* Assets.xcassets */,
 				E6E32CDD2625D2B900013091 /* LaunchScreen.storyboard */,
@@ -177,6 +180,7 @@
 				E6E32CDF2625D2B900013091 /* LaunchScreen.storyboard in Resources */,
 				E6E32CDC2625D2B900013091 /* Assets.xcassets in Resources */,
 				E6E32CDA2625D2B600013091 /* Main.storyboard in Resources */,
+				E66282CD2633FE7200FABAA1 /* Glow.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +239,7 @@
 				E6E32CD72625D2B600013091 /* ViewController.swift in Sources */,
 				E6E32CD32625D2B600013091 /* AppDelegate.swift in Sources */,
 				E6E32CD52625D2B600013091 /* SceneDelegate.swift in Sources */,
-				E66282C62631992400FABAA1 /* MusicViewController.swift in Sources */,
+				E66282C62631992400FABAA1 /* musicViewController.swift in Sources */,
 				E66282C92631A1AF00FABAA1 /* ProfileDeatilViewController.swift in Sources */,
 				E6E32CF42628543300013091 /* profileViewController.swift in Sources */,
 				E6E32D07262869C400013091 /* hobbyDetailView.swift in Sources */,
