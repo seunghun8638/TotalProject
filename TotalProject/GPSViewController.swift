@@ -10,7 +10,6 @@ import MapKit
 
 class GPSViewController: UIViewController,CLLocationManagerDelegate{
     
-
     let loactionManager = CLLocationManager()
     @IBOutlet weak var MapView: MKMapView!
     override func viewDidLoad() {

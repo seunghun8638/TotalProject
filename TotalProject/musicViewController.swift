@@ -13,8 +13,13 @@ class musicViewController: UIViewController ,AVAudioPlayerDelegate{
     var audioFile : URL!
     var audioPlayer : AVAudioPlayer!
     var maxVolume : Float = 10.0
-
-    @IBOutlet weak var svolume: UILabel!
+    var progressT : Timer!
+    
+    @IBOutlet var pvProgressPlay: UIProgressView!
+    
+    @IBOutlet var currentTime: UILabel!
+    @IBOutlet var endTime: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,12 +30,21 @@ class musicViewController: UIViewController ,AVAudioPlayerDelegate{
         
          audioFile = Bundle.main.url(forResource: "Glow", withExtension: "mp3")
         play()
+        currentTime.text = converNSTimeInterval2String(0)
+        endTime.text = converNSTimeInterval2String(audioPlayer.duration)
     }
-//    var audioPlayer : AVAudioPlayer!
-//
-//
-//
-//
+    
+    func converNSTimeInterval2String(_ time : TimeInterval) -> String{
+        let min = Int(time/60)
+        let sec = Int(time.truncatingRemainder(dividingBy: 60))
+        let strTime = String(format : "%02d:%02d",min,sec)
+        return strTime
+    }
+    let timePlayerSelector : Selector = #selector(musicViewController.updatePlayTime)
+    @objc func updatePlayTime(){
+        currentTime.text = converNSTimeInterval2String(audioPlayer.currentTime)
+        pvProgressPlay.progress = Float(audioPlayer.currentTime/audioPlayer.duration)
+    }
     
     func play(){
         do{
@@ -49,6 +63,8 @@ class musicViewController: UIViewController ,AVAudioPlayerDelegate{
         startBtn.isEnabled = true
         stopBtn.isEnabled = false
         
+        progressT = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: timePlayerSelector, userInfo: nil, repeats: true)
+    
         
         
     }
@@ -71,6 +87,8 @@ class musicViewController: UIViewController ,AVAudioPlayerDelegate{
     @IBAction func stopBtn(_ sender: UIButton) {
         audioPlayer.stop()
         setButtons(true, pause: true)
+        
+        progressT.invalidate()
         
     }
     @IBOutlet var volumeChange: UISlider!

@@ -13,16 +13,13 @@ class profileViewController: UIViewController {
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var jobLabel: UILabel!
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Profile View"
-        self.navigationItem.backButtonTitle = "Back"
-        
+
         imgProfile.image = img
         prepareAnimation()
+        
     }
     
     let img = UIImage(named: "luffy.jpg")

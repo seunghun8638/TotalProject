@@ -18,31 +18,36 @@ class MainViewController: UIViewController,UITabBarControllerDelegate{
         self.navigationItem.title = "Main View"
         self.navigationItem.backButtonTitle = "Back"
         
-        HelloLabel.text = "Hello! \(helloText!)"
+        HelloLabel.text = "Hello! "
     
     }
 
  
     
     @IBAction func profileBtn(_ sender: Any) {
-        guard let profileBtn = self.storyboard?.instantiateViewController(identifier: "profileViewController") as? profileViewController else {return}
-        self.navigationController?.pushViewController(profileBtn, animated: true)
+        let profileBtn = self.storyboard?.instantiateViewController(identifier: "profileViewController") as? profileViewController
+        profileBtn?.modalTransitionStyle = .coverVertical
+        self.present(profileBtn!, animated: true, completion: nil)
     }
     @IBAction func hobbyBtn(_ sender: Any) {
-        guard let name = self.storyboard?.instantiateViewController(identifier: "hobbyControllerView") as? hobbyControllerView else {return}
-        self.navigationController?.pushViewController(name, animated: true)
+         let name = self.storyboard?.instantiateViewController(identifier: "hobbyControllerView") as? hobbyControllerView
+        name?.modalTransitionStyle = .coverVertical
+        self.present(name!, animated: true, completion: nil)
     }
     @IBAction func CalendarBtn(_ sender: Any) {
-        guard let calendar  = self.storyboard?.instantiateViewController(identifier: "CalendarViewController") as? CalendarViewController else {return}
-        self.navigationController?.pushViewController(calendar, animated: true)
+         let calendar  = self.storyboard?.instantiateViewController(identifier: "CalendarViewController") as? CalendarViewController
+        calendar?.modalTransitionStyle = .coverVertical
+        self.present(calendar!, animated: true, completion: nil)
     }
     @IBAction func WeatherBtn(_ sender: Any){
-        guard let weather  = self.storyboard?.instantiateViewController(identifier: "GPSViewController") as? GPSViewController else {return}
-        self.navigationController?.pushViewController(weather, animated: true)
+         let weather  = self.storyboard?.instantiateViewController(identifier: "GPSViewController") as? GPSViewController
+        weather?.modalTransitionStyle = .coverVertical
+        self.present(weather!, animated: true, completion: nil)
     }
     @IBAction func MusicBtn(_ sender: Any) {
-        guard let music = self.storyboard?.instantiateViewController(identifier: "musicViewController") as? musicViewController else{return}
-        self.navigationController?.pushViewController(music, animated: true)
+         let music = self.storyboard?.instantiateViewController(identifier: "musicViewController") as? musicViewController
+        music?.modalTransitionStyle = .coverVertical
+        self.present(music!, animated: true, completion: nil)
     }
     
 }

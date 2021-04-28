@@ -14,6 +14,8 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
     
     let dateFormatter = DateFormatter()
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Calendar View"
