@@ -19,8 +19,8 @@
 		E6E32CDF2625D2B900013091 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6E32CDD2625D2B900013091 /* LaunchScreen.storyboard */; };
 		E6E32CF12627190C00013091 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CF02627190C00013091 /* MainViewController.swift */; };
 		E6E32CF42628543300013091 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CF32628543300013091 /* profileViewController.swift */; };
-		E6E32D002628622500013091 /* hobbyControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CFF2628622500013091 /* hobbyControllerView.swift */; };
-		E6E32D07262869C400013091 /* hobbyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32D06262869C400013091 /* hobbyDetailView.swift */; };
+		E6E32D002628622500013091 /* favoriteControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CFF2628622500013091 /* favoriteControllerView.swift */; };
+		E6E32D07262869C400013091 /* favoriteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32D06262869C400013091 /* favoriteDetailView.swift */; };
 		E6E32D0A262BBF1400013091 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32D09262BBF1400013091 /* CalendarViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +41,8 @@
 		E6E32CE02625D2B900013091 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6E32CF02627190C00013091 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E6E32CF32628543300013091 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
-		E6E32CFF2628622500013091 /* hobbyControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = hobbyControllerView.swift; path = ../../../Documents/hobbyControllerView.swift; sourceTree = "<group>"; };
-		E6E32D06262869C400013091 /* hobbyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hobbyDetailView.swift; sourceTree = "<group>"; };
+		E6E32CFF2628622500013091 /* favoriteControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = favoriteControllerView.swift; path = ../../../Documents/favoriteControllerView.swift; sourceTree = "<group>"; };
+		E6E32D06262869C400013091 /* favoriteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favoriteDetailView.swift; sourceTree = "<group>"; };
 		E6E32D09262BBF1400013091 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,9 +105,9 @@
 				E6E32D09262BBF1400013091 /* CalendarViewController.swift */,
 				E6E32CF32628543300013091 /* profileViewController.swift */,
 				E6E32CF02627190C00013091 /* MainViewController.swift */,
-				E6E32CFF2628622500013091 /* hobbyControllerView.swift */,
+				E6E32CFF2628622500013091 /* favoriteControllerView.swift */,
 				E66282C52631992400FABAA1 /* musicViewController.swift */,
-				E6E32D06262869C400013091 /* hobbyDetailView.swift */,
+				E6E32D06262869C400013091 /* favoriteDetailView.swift */,
 				E6E32CDB2625D2B900013091 /* Assets.xcassets */,
 				E6E32CDD2625D2B900013091 /* LaunchScreen.storyboard */,
 				E6E32CE02625D2B900013091 /* Info.plist */,
@@ -232,13 +232,13 @@
 			files = (
 				E6E32D0A262BBF1400013091 /* CalendarViewController.swift in Sources */,
 				E66282BA262EF5BE00FABAA1 /* GPSViewController.swift in Sources */,
-				E6E32D002628622500013091 /* hobbyControllerView.swift in Sources */,
+				E6E32D002628622500013091 /* favoriteControllerView.swift in Sources */,
 				E6E32CD32625D2B600013091 /* AppDelegate.swift in Sources */,
 				E6E32CD52625D2B600013091 /* SceneDelegate.swift in Sources */,
 				E66282C62631992400FABAA1 /* musicViewController.swift in Sources */,
 				E66282C92631A1AF00FABAA1 /* ProfileDeatilViewController.swift in Sources */,
 				E6E32CF42628543300013091 /* profileViewController.swift in Sources */,
-				E6E32D07262869C400013091 /* hobbyDetailView.swift in Sources */,
+				E6E32D07262869C400013091 /* favoriteDetailView.swift in Sources */,
 				E6E32CF12627190C00013091 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

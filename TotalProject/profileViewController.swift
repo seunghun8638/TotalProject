@@ -34,13 +34,11 @@ class profileViewController: UIViewController {
         nameLabel.transform = CGAffineTransform(translationX: view.bounds.width, y: 0).scaledBy(x: 3, y: 3).rotated(by: 180)
         jobLabel.transform = CGAffineTransform(translationX: view.bounds.width, y: 0).scaledBy(x: 3, y: 3).rotated(by: 180)
         
-        
         nameLabel.alpha = 0
         jobLabel.alpha = 0
     }
     
     private func showAnimation() {
-        
         UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 2, options: .allowUserInteraction, animations: {
             self.nameLabel.transform = CGAffineTransform.identity
             self.nameLabel.alpha = 1
