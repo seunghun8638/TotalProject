@@ -48,7 +48,7 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate{
        _ = goLocate(latitude: (lastLocation?.coordinate.latitude)!, longitude: (lastLocation?.coordinate.longitude)!, delta: 0.01)
         //현재위치에 위도 경도를 goLocate 함수를 이용
         //delta -> 지도 확대
-        
+    
         CLGeocoder().reverseGeocodeLocation(lastLocation!) { (placemark, error) -> Void in
             let pm = placemark!.first
             let county = pm!.country
@@ -63,10 +63,11 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate{
             }
             self.MapInfo1.text = "현재 위치"
             self.MapInfo2.text = address
-        }
+        }//GPSView로 들어 왔을 때, 현재 위치를 보여주며 택스트를 변경하여 화면에 나타남
         loactionManager.stopUpdatingLocation()
     }
     
+    //setPin는 해당 위치 위도,경도를 보여주는 역할
     func setPin(latitude : CLLocationDegrees , longitude : CLLocationDegrees , delta span : Double){
         let pin = MKPointAnnotation()
         pin.coordinate = goLocate(latitude: latitude, longitude: longitude, delta: span)
@@ -80,10 +81,10 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate{
     //상단에 위치를 눌렀을 시 나타나는 곳을 보여줌
     @IBAction func changeMap(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0{
-            MapInfo1.text = "보고 계신 위치"
+            MapInfo1.text = "보고 계신 위치" //세그먼트0을 눌렀을 때, 텍스트가 나오며 loactionManager.startUpdatingLocation() 위치를 보여줌
             MapInfo2.text = "현재 위치"
             loactionManager.startUpdatingLocation()
-        }else if sender.selectedSegmentIndex == 1{
+        }else if sender.selectedSegmentIndex == 1{ //세그먼트1을 눌렀을 때, 텍스트가 나오며 setPin을 통해 위도,경도를 받아 지도로 올린다.
             setPin(latitude: 37.500061, longitude: 126.86780, delta: 0.01)
             MapInfo1.text = "보고 계신 위치"
             MapInfo2.text = "동양 미래 대학교"
