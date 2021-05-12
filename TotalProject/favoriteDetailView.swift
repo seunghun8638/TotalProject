@@ -9,6 +9,7 @@ import UIKit
 
 class favoriteDetailView: UIViewController {
 
+    //favoriteControllerView에서 넘겨주는 정보를 저장하기 위해 사용하는 변수
     var number : Int?
     var name : String?
     
@@ -25,7 +26,7 @@ class favoriteDetailView: UIViewController {
         dismiss(animated: true, completion: nil)
     }
    
-    
+    //받아온 정보를 저장하여 label 과 imageView에 정보 넘겨줘 보여줌
     func update(){
         if let name = self.name , let number = self.number{
             nameText.text = name

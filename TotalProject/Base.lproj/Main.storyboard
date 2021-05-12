@@ -286,6 +286,7 @@
                                     <segment title="현재 위치"/>
                                     <segment title="대학교"/>
                                     <segment title="가고 싶은 곳"/>
+                                    <segment title="회사"/>
                                 </segments>
                                 <connections>
                                     <action selector="changeMap:" destination="lO1-H5-d81" eventType="valueChanged" id="EMq-cv-NwI"/>

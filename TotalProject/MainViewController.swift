@@ -11,8 +11,6 @@ class MainViewController: UIViewController,UITabBarControllerDelegate{
 
     @IBOutlet weak var HelloLabel: UILabel!
     
-    var helloText : String!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // 앱 처음 화면 상단 문구
@@ -21,7 +19,6 @@ class MainViewController: UIViewController,UITabBarControllerDelegate{
     }
 
  //버튼 클릭 동작으로 화면 전환 동작
-    
     @IBAction func profileBtn(_ sender: Any) {
         let profileBtn = self.storyboard?.instantiateViewController(identifier: "profileViewController") as? profileViewController
         profileBtn?.modalTransitionStyle = .coverVertical //화면 스타일
