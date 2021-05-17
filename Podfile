@@ -10,6 +10,7 @@ target 'TotalProject' do
 	pod 'FSCalendar'
 
 	pod 'Firebase/Analytics'
+  pod 'Firebase/Database'
 end
 
 

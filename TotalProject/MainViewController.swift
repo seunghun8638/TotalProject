@@ -44,5 +44,10 @@ class MainViewController: UIViewController,UITabBarControllerDelegate{
         music?.modalTransitionStyle = .coverVertical
         self.present(music!, animated: true, completion: nil)
     }
+    @IBAction func memoBtn(_ sender: Any) {
+        let memoBtn = self.storyboard?.instantiateViewController(identifier: "memoViewController") as? memoViewController
+        memoBtn?.modalTransitionStyle = .flipHorizontal
+       self.present(memoBtn!, animated: true, completion: nil)
+    }
     
 }
