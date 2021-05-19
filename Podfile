@@ -11,6 +11,7 @@ target 'TotalProject' do
 
 	pod 'Firebase/Analytics'
   pod 'Firebase/Database'
+  
 end
 
 
