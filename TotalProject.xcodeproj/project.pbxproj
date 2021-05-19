@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		937CCD7E7D23D456D18A7FD9 /* Pods_TotalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41DC43881B596CD36F1E357F /* Pods_TotalProject.framework */; };
-		E6360D06264D4AC70075979B /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6360D05264D4AC70075979B /* MemoViewController.swift */; };
+		E6360D06264D4AC70075979B /* memoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6360D05264D4AC70075979B /* memoViewController.swift */; };
 		E6360D08264D4BA10075979B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6360D07264D4BA10075979B /* GoogleService-Info.plist */; };
 		E66282BA262EF5BE00FABAA1 /* GPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66282B9262EF5BE00FABAA1 /* GPSViewController.swift */; };
 		E66282C62631992400FABAA1 /* musicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66282C52631992400FABAA1 /* musicViewController.swift */; };
 		E66282C92631A1AF00FABAA1 /* ProfileDeatilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66282C82631A1AF00FABAA1 /* ProfileDeatilViewController.swift */; };
 		E66282CD2633FE7200FABAA1 /* Glow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E66282CC2633FE7200FABAA1 /* Glow.mp3 */; };
-		E67B8D4C26529C870072F768 /* memoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B8D4B26529C870072F768 /* memoDetailViewController.swift */; };
+		E67B8D4C26529C870072F768 /* memoaddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B8D4B26529C870072F768 /* memoaddViewController.swift */; };
+		E67B8D7326551CB80072F768 /* memoDeatilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B8D7226551CB80072F768 /* memoDeatilViewController.swift */; };
 		E6E32CD32625D2B600013091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CD22625D2B600013091 /* AppDelegate.swift */; };
 		E6E32CD52625D2B600013091 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CD42625D2B600013091 /* SceneDelegate.swift */; };
 		E6E32CDA2625D2B600013091 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6E32CD82625D2B600013091 /* Main.storyboard */; };
@@ -31,13 +32,14 @@
 		0BF47D603800873438CFD7C8 /* Pods-TotalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TotalProject.release.xcconfig"; path = "Target Support Files/Pods-TotalProject/Pods-TotalProject.release.xcconfig"; sourceTree = "<group>"; };
 		41DC43881B596CD36F1E357F /* Pods_TotalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TotalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92FD1212CDAB432D4CAAD116 /* Pods-TotalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TotalProject.debug.xcconfig"; path = "Target Support Files/Pods-TotalProject/Pods-TotalProject.debug.xcconfig"; sourceTree = "<group>"; };
-		E6360D05264D4AC70075979B /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
+		E6360D05264D4AC70075979B /* memoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoViewController.swift; sourceTree = "<group>"; };
 		E6360D07264D4BA10075979B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E66282B9262EF5BE00FABAA1 /* GPSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSViewController.swift; sourceTree = "<group>"; };
 		E66282C52631992400FABAA1 /* musicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicViewController.swift; sourceTree = "<group>"; };
 		E66282C82631A1AF00FABAA1 /* ProfileDeatilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDeatilViewController.swift; sourceTree = "<group>"; };
 		E66282CC2633FE7200FABAA1 /* Glow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Glow.mp3; sourceTree = "<group>"; };
-		E67B8D4B26529C870072F768 /* memoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoDetailViewController.swift; sourceTree = "<group>"; };
+		E67B8D4B26529C870072F768 /* memoaddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoaddViewController.swift; sourceTree = "<group>"; };
+		E67B8D7226551CB80072F768 /* memoDeatilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoDeatilViewController.swift; sourceTree = "<group>"; };
 		E6E32CCF2625D2B600013091 /* TotalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TotalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E32CD22625D2B600013091 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6E32CD42625D2B600013091 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,13 +109,14 @@
 				E6E32CD42625D2B600013091 /* SceneDelegate.swift */,
 				E6E32CD82625D2B600013091 /* Main.storyboard */,
 				E66282C82631A1AF00FABAA1 /* ProfileDeatilViewController.swift */,
+				E67B8D7226551CB80072F768 /* memoDeatilViewController.swift */,
 				E66282B9262EF5BE00FABAA1 /* GPSViewController.swift */,
 				E6E32D09262BBF1400013091 /* CalendarViewController.swift */,
-				E67B8D4B26529C870072F768 /* memoDetailViewController.swift */,
+				E67B8D4B26529C870072F768 /* memoaddViewController.swift */,
 				E6E32CF32628543300013091 /* profileViewController.swift */,
 				E6E32CF02627190C00013091 /* MainViewController.swift */,
 				E6E32CFF2628622500013091 /* favoriteControllerView.swift */,
-				E6360D05264D4AC70075979B /* MemoViewController.swift */,
+				E6360D05264D4AC70075979B /* memoViewController.swift */,
 				E66282C52631992400FABAA1 /* musicViewController.swift */,
 				E6E32D06262869C400013091 /* favoriteDetailView.swift */,
 				E6E32CDB2625D2B900013091 /* Assets.xcassets */,
@@ -241,15 +244,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6E32D0A262BBF1400013091 /* CalendarViewController.swift in Sources */,
-				E6360D06264D4AC70075979B /* MemoViewController.swift in Sources */,
+				E6360D06264D4AC70075979B /* memoViewController.swift in Sources */,
 				E66282BA262EF5BE00FABAA1 /* GPSViewController.swift in Sources */,
 				E6E32D002628622500013091 /* favoriteControllerView.swift in Sources */,
+				E67B8D7326551CB80072F768 /* memoDeatilViewController.swift in Sources */,
 				E6E32CD32625D2B600013091 /* AppDelegate.swift in Sources */,
 				E6E32CD52625D2B600013091 /* SceneDelegate.swift in Sources */,
 				E66282C62631992400FABAA1 /* musicViewController.swift in Sources */,
 				E66282C92631A1AF00FABAA1 /* ProfileDeatilViewController.swift in Sources */,
 				E6E32CF42628543300013091 /* profileViewController.swift in Sources */,
-				E67B8D4C26529C870072F768 /* memoDetailViewController.swift in Sources */,
+				E67B8D4C26529C870072F768 /* memoaddViewController.swift in Sources */,
 				E6E32D07262869C400013091 /* favoriteDetailView.swift in Sources */,
 				E6E32CF12627190C00013091 /* MainViewController.swift in Sources */,
 			);
