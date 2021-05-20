@@ -52,18 +52,32 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+//        dateFormatter.dateFormat = "YYYY-MM-dd"
+//        let dataString = self.dateFormatter.string(from:date)
+//        print(dataString)
+        guard let data = self.storyboard?.instantiateViewController(identifier: "calendarAddViewController") as? calendarAddViewController else {return}
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"
-               print(dateFormatter.string(from: date))
+        data.dateText = dateFormatter.string(from: date)
+        self.present(data, animated: true, completion: nil)
+        
+        
     }
-
+    
+    @IBAction func addBtn(_ sender: Any) {
+        
+    }
+    
     //calendar위에 정보를 입력
     func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
+
+    
         switch dateFormatter.string(from: date) {
-        case "2021-05-11":
+        case "2021-05-01":
             return "운동"
-        case "2021-05-12":
+        case "2021-05-02":
             return "지각"
-        case "2021-05-13":
+        case "2021-05-03":
             return "저장"
         default:
             return nil
@@ -71,3 +85,29 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
     }
 }
 
+class DateMemo {
+
+    var date : String
+//    var dateText : String
+    
+    init(date : String) {
+        self.date = date
+//        self.dateText = dateText
+    }
+
+    static var DateMemoList = [
+        DateMemo(date: "2021-05-11")
+    ]
+}
+
+class TextMemo {
+    var textMemo : String
+    
+    init(textMemo : String) {
+        self.textMemo = textMemo
+    }
+    
+    static var TextMemoList = [
+        TextMemo(textMemo: "테스트")
+    ]
+}

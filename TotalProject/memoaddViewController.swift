@@ -37,18 +37,3 @@ class memoaddViewController: UIViewController {
         
     }
 
-
-
-class Memo {
-    var content : String
-    var insertDate : Date = Date()
-    
-    init(content : String){
-        self.content = content
-        self.insertDate = Date()
-    }
-    
-    static var memoList = [
-        Memo(content: "Memo List"),Memo(content: "Ohseunghun")
-    ]
-}

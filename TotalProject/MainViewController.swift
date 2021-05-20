@@ -46,7 +46,7 @@ class MainViewController: UIViewController,UITabBarControllerDelegate{
     }
     @IBAction func memoBtn(_ sender: Any) {
         let memoBtn = self.storyboard?.instantiateViewController(identifier: "memoViewController") as? memoViewController
-        memoBtn?.modalTransitionStyle = .flipHorizontal
+        memoBtn?.modalTransitionStyle = .coverVertical
        self.present(memoBtn!, animated: true, completion: nil)
     }
     
