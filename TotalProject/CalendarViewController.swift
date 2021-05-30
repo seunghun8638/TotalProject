@@ -7,10 +7,16 @@
 
 import UIKit
 import FSCalendar
+import RealmSwift
 
 //FSCalendar 이용하여 달력 이용
 
+class calendarInfo:Object {
+    @objc dynamic var date = "2021-05-03"
+    @objc dynamic var content = "테스트"
+}
 class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarDataSource{
+    var realm : Realm!
     
     @IBOutlet weak var calendar: FSCalendar!
     
@@ -18,6 +24,8 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        realm = try! Realm()
+        print(realm.objects(calendarInfo.self))
         
         calendar.delegate = self
         calendar.dataSource = self
@@ -33,7 +41,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         
         
         calendar.appearance.headerMinimumDissolvedAlpha = 0
-
+        
         calendar.appearance.headerDateFormat = "YYYY년 M월" // -> 상단 커스텀하여 영어를 한글로 변경
 
 
@@ -50,7 +58,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         
         calendar.appearance.subtitleSelectionColor = .black
     }
-    
+
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
 //        dateFormatter.dateFormat = "YYYY-MM-dd"
 //        let dataString = self.dateFormatter.string(from:date)
@@ -60,54 +68,47 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         dateFormatter.dateFormat = "YYYY-MM-dd"
         data.dateText = dateFormatter.string(from: date)
         self.present(data, animated: true, completion: nil)
-        
-        
     }
     
-    @IBAction func addBtn(_ sender: Any) {
-        
+    @IBAction func reloadBtn(_ sender: Any) {
+        realm = try! Realm()
+        calendar.reloadData()
+        print("reload")
+        print(realm.objects(calendarInfo.self))
     }
-    
-    //calendar위에 정보를 입력
-    func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
 
-    
-        switch dateFormatter.string(from: date) {
-        case "2021-05-01":
-            return "운동"
-        case "2021-05-02":
-            return "지각"
-        case "2021-05-03":
-            return "저장"
-        default:
-            return nil
+    @IBAction func deleteBtn(_ sender: Any) {
+        realm = try! Realm()
+        try! realm.write{
+            realm.deleteAll()
         }
     }
-}
+    //calendar위에 정보를 입력
+    func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
+        let item = realm.objects(calendarInfo.self)
+        if item.count == 0{
+            return nil
+        }
+        else if item.count != 0{
+                for i in 0...item.count {
+                    switch dateFormatter.string(from: date) {
+                    case item[i].date:
+                        return item[i].content
+                    case item[i+1].date:
+                        return item[i+1].content
+                    default:
+                        return nil
+                }
+            }
+        }
+        return nil
 
-class DateMemo {
-
-    var date : String
-//    var dateText : String
-    
-    init(date : String) {
-        self.date = date
-//        self.dateText = dateText
-    }
-
-    static var DateMemoList = [
-        DateMemo(date: "2021-05-11")
-    ]
-}
-
-class TextMemo {
-    var textMemo : String
-    
-    init(textMemo : String) {
-        self.textMemo = textMemo
     }
     
-    static var TextMemoList = [
-        TextMemo(textMemo: "테스트")
-    ]
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        calendar.reloadData()
+        print("reload")
+        
+    }
 }

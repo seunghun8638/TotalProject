@@ -17,6 +17,7 @@
 		E67B8D4C26529C870072F768 /* memoaddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B8D4B26529C870072F768 /* memoaddViewController.swift */; };
 		E67B8D7326551CB80072F768 /* memoDeatilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B8D7226551CB80072F768 /* memoDeatilViewController.swift */; };
 		E67B8D7526567A7B0072F768 /* calendarAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B8D7426567A7B0072F768 /* calendarAddViewController.swift */; };
+		E6C40FBA266393770017D5F8 /* alertImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C40FB9266393770017D5F8 /* alertImage.swift */; };
 		E6E32CD32625D2B600013091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CD22625D2B600013091 /* AppDelegate.swift */; };
 		E6E32CD52625D2B600013091 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CD42625D2B600013091 /* SceneDelegate.swift */; };
 		E6E32CDA2625D2B600013091 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6E32CD82625D2B600013091 /* Main.storyboard */; };
@@ -25,7 +26,6 @@
 		E6E32CF12627190C00013091 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CF02627190C00013091 /* MainViewController.swift */; };
 		E6E32CF42628543300013091 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CF32628543300013091 /* profileViewController.swift */; };
 		E6E32D002628622500013091 /* favoriteControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CFF2628622500013091 /* favoriteControllerView.swift */; };
-		E6E32D07262869C400013091 /* favoriteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32D06262869C400013091 /* favoriteDetailView.swift */; };
 		E6E32D0A262BBF1400013091 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32D09262BBF1400013091 /* CalendarViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +42,7 @@
 		E67B8D4B26529C870072F768 /* memoaddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoaddViewController.swift; sourceTree = "<group>"; };
 		E67B8D7226551CB80072F768 /* memoDeatilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoDeatilViewController.swift; sourceTree = "<group>"; };
 		E67B8D7426567A7B0072F768 /* calendarAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarAddViewController.swift; sourceTree = "<group>"; };
+		E6C40FB9266393770017D5F8 /* alertImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alertImage.swift; sourceTree = "<group>"; };
 		E6E32CCF2625D2B600013091 /* TotalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TotalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E32CD22625D2B600013091 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6E32CD42625D2B600013091 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 		E6E32CF02627190C00013091 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E6E32CF32628543300013091 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		E6E32CFF2628622500013091 /* favoriteControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = favoriteControllerView.swift; path = ../../../Documents/favoriteControllerView.swift; sourceTree = "<group>"; };
-		E6E32D06262869C400013091 /* favoriteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favoriteDetailView.swift; sourceTree = "<group>"; };
 		E6E32D09262BBF1400013091 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,9 +119,9 @@
 				E6E32CF32628543300013091 /* profileViewController.swift */,
 				E6E32CF02627190C00013091 /* MainViewController.swift */,
 				E6E32CFF2628622500013091 /* favoriteControllerView.swift */,
+				E6C40FB9266393770017D5F8 /* alertImage.swift */,
 				E6360D05264D4AC70075979B /* memoViewController.swift */,
 				E66282C52631992400FABAA1 /* musicViewController.swift */,
-				E6E32D06262869C400013091 /* favoriteDetailView.swift */,
 				E6E32CDB2625D2B900013091 /* Assets.xcassets */,
 				E6E32CDD2625D2B900013091 /* LaunchScreen.storyboard */,
 				E6E32CE02625D2B900013091 /* Info.plist */,
@@ -249,6 +249,7 @@
 				E6E32D0A262BBF1400013091 /* CalendarViewController.swift in Sources */,
 				E6360D06264D4AC70075979B /* memoViewController.swift in Sources */,
 				E66282BA262EF5BE00FABAA1 /* GPSViewController.swift in Sources */,
+				E6C40FBA266393770017D5F8 /* alertImage.swift in Sources */,
 				E6E32D002628622500013091 /* favoriteControllerView.swift in Sources */,
 				E67B8D7326551CB80072F768 /* memoDeatilViewController.swift in Sources */,
 				E6E32CD32625D2B600013091 /* AppDelegate.swift in Sources */,
@@ -258,7 +259,6 @@
 				E66282C92631A1AF00FABAA1 /* ProfileDeatilViewController.swift in Sources */,
 				E6E32CF42628543300013091 /* profileViewController.swift in Sources */,
 				E67B8D4C26529C870072F768 /* memoaddViewController.swift in Sources */,
-				E6E32D07262869C400013091 /* favoriteDetailView.swift in Sources */,
 				E6E32CF12627190C00013091 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

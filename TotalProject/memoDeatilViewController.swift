@@ -9,8 +9,11 @@ import UIKit
 
 class memoDeatilViewController: UIViewController {
 
-    var text : String?
+    var Atitle : String?
+    var AContent : String?
     
+    @IBOutlet var loadTitel: UILabel!
+    @IBOutlet var loadContent: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,14 +23,8 @@ class memoDeatilViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBOutlet var textLabel: UILabel!
-    
-
     func update(){
-        if let text = self.text{
-            textLabel.text = text
-        }
-        
+        self.loadTitel.text = Atitle!
+        self.loadContent.text = AContent!
     }
-
 }

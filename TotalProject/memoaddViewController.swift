@@ -6,34 +6,64 @@
 //
 
 import UIKit
+import Firebase
+import RealmSwift
+
 
 class memoaddViewController: UIViewController {
 
-    @IBOutlet var memoTextView: UITextView!
+    var realm : Realm!
+    
+    @IBOutlet var titleText: UITextField!
+    @IBOutlet var contentText: UITextView!
     
     var delegate : listcell?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        realm = try! Realm()
+        contentText.layer.borderWidth = 1.0
+        contentText.layer.borderColor = UIColor.black.cgColor
+        
+        titleText.layer.borderWidth = 1.0
+        titleText.layer.borderColor = UIColor.black.cgColor
     }
+    
+
     @IBAction func cancelBtn(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    
     @IBAction func saveBtn(_ sender: Any) {
-        if let memoText = memoTextView.text , memoText.count == 0 {
-            let alert  = UIAlertController(title: "알림", message: "입력해주시오", preferredStyle: .alert)
-            let action = UIAlertAction(title: "확인", style: .default, handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
-        }else if let memoText = memoTextView.text , memoText.count != 0{
-            let memotext = memo(content: memoText)
-            memo.memoList.append(memotext)
-            print("\(memo.memoList)")
+        
+        let title = titleText.text!
+        let content = contentText.text!
+        
+        if title.count == 0 {
+            alertMessage("제목을 입력해주시오")
+        }else if content.count == 0{
+            alertMessage("내용을 입력해주시오")
+        }else if title.count == 0 && content.count == 0 {
+            alertMessage("입력해주시오")
+        }
+        else{
+            let memoInfoA = memoInfo()
+            memoInfoA.title = title
+            memoInfoA.content = content
+            
+            try! realm.write {
+                realm.add(memoInfoA)
+            }
             dismiss(animated: true, completion: nil)
         }
-           
-        }
         
+        func alertMessage(_ message : String){
+            let alert = UIAlertController.init(title: "알림", message: message, preferredStyle: .alert)
+            let OK = UIAlertAction.init(title: "확인", style: .default, handler: nil)
+            alert.addAction(OK)
+            present(alert, animated: true, completion: nil)
+        }
     }
+}
 

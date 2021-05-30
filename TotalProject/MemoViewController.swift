@@ -6,33 +6,64 @@
 //
 
 import UIKit
-import Firebase
+import RealmSwift
+
+class memoInfo:Object {
+    @objc dynamic var title = ""
+    @objc dynamic var content = ""
+}
 
 class memoViewController : UITableViewController{
     
+    @IBOutlet var tableview: UITableView!
+    var realm : Realm!
+    
+    @IBAction func reloadBtn(_ sender: Any) {
+        tableview.reloadData()
+        realm = try! Realm()
+    }
+    @IBAction func deleteBtn(_ sender: Any) {
+        realm = try! Realm()
+        try! realm.write{
+            realm.deleteAll()
+        }
+    }
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return memo.memoList.count
+        let listNum = realm.objects(memoInfo.self)
+        return listNum.count
     }
     
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? listcell {
-            let data = memo.memoList[indexPath.row]
-            cell.titleList.text = data.cotent
+            let item = realm.objects(memoInfo.self)
+            let titleItem = item[indexPath.row].title
+            let contentItem = item[indexPath.row].content
+            
+            cell.titleList.text = titleItem
+            cell.subtitleList.text = contentItem
+            
             return cell
-        }
-        
+            }
+            
         return UITableViewCell()
     }
+        
+
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             let info = segue.destination as? memoDeatilViewController
             if let index = sender as? Int{
-                let memo = memo.memoList[index]
-                info?.text = memo.cotent
-                print(memo.cotent)
+                let item = realm.objects(memoInfo.self)
+                let loadTitle = item[index].title
+                let loadContent = item[index].content
+                info?.Atitle = loadTitle
+                info?.AContent = loadContent
             }
         }
     }
@@ -40,66 +71,22 @@ class memoViewController : UITableViewController{
         performSegue(withIdentifier: "showDetail", sender: indexPath.row)
     }
     
-    //화면에 표시되기 직전에 자동 호출
-    //테이블뷰 목록 업데이트
-  
-    let db = Database.database().reference()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-//        update()
-//        saveBasicTypes()
-        
+        realm = try! Realm()
     }
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         tableView.reloadData()
+        realm = try! Realm()
     }
     
-  
-//    @IBOutlet var dataLabel: UILabel!
     
-    func update(){
-        db.child("firstData").observeSingleEvent(of: .value) { snapshot in
-            print("--->\(snapshot)")
-
-            let value = snapshot.value as? String ?? ""
-//                self.dataLabel.text = value
-        }
-    }
-    
-}
-//
-extension memoViewController {
-    func saveBasicTypes() {
-        //firebase child ("key").setValue(Value)
-        //-string,numbr,dictionary , array
-        db.child("int").setValue(3)
-        db.child("doble").setValue(3.5)
-        db.child("str").setValue("string value - 여러분 안녕")
-        db.child("array").setValue(["a","b","c"])
-        db.child("dict").setValue(["id":"anyId","age":10,"city":"seoul"])
-    }
-
 
 }
-
-class memo {
-    var cotent : String
-    
-    init(content : String) {
-        self.cotent = content
-    }
-    
-    static var memoList = [
-        memo(content: "오승훈"),
-        memo(content: "Hello")
-    ]
-    
-}
-
 
 class listcell : UITableViewCell{
     @IBOutlet var titleList: UILabel!
     @IBOutlet var subtitleList: UILabel!
 }
+

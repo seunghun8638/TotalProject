@@ -6,16 +6,20 @@
 //
 
 import UIKit
+import RealmSwift
+
+
 
 class calendarAddViewController: UIViewController {
-
+    var realm : Realm!
     
     var dateText : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dateLabel.text = dateText
+        realm = try! Realm()
     }
+
     
     @IBOutlet var dateLabel: UILabel!
     
@@ -27,18 +31,22 @@ class calendarAddViewController: UIViewController {
     }
     
     @IBAction func saveBtn(_ sender: Any) {
-        if let memoText = calMemo.text,let dateMemo = dateLabel.text , memoText.count != 0{
-            let dateText = DateMemo(date: dateMemo)
-            let memoText = TextMemo(textMemo: memoText)
+        let memoText = calMemo.text
+        if memoText?.count == 0{
             
-            DateMemo.DateMemoList.append(dateText)
-            TextMemo.TextMemoList.append(memoText)
+        }else {
+            let dateText = dateText!
             
+            let info = calendarInfo()
+            info.date = dateText
+            info.content = calMemo.text!
+            try! realm.write {
+                realm.add(info)
+                print(realm.objects(calendarInfo.self))
+            }
             dismiss(animated: true, completion: nil)
         }
       
     }
-    
-    
 
 }
