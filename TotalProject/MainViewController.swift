@@ -20,34 +20,30 @@ class MainViewController: UIViewController,UITabBarControllerDelegate{
 
  //버튼 클릭 동작으로 화면 전환 동작
     @IBAction func profileBtn(_ sender: Any) {
-        let profileBtn = self.storyboard?.instantiateViewController(identifier: "profileViewController") as? profileViewController
-        profileBtn?.modalTransitionStyle = .coverVertical //화면 스타일
-        self.present(profileBtn!, animated: true, completion: nil)
+        btnView("profileBtn", "profileViewController")
     }
     @IBAction func hobbyBtn(_ sender: Any) {
-         let name = self.storyboard?.instantiateViewController(identifier: "favoriteControllerView") as? favoriteControllerView
-        name?.modalTransitionStyle = .coverVertical
-        self.present(name!, animated: true, completion: nil)
+        btnView("favorite", "favoriteControllerView")
     }
     @IBAction func CalendarBtn(_ sender: Any) {
-         let calendar  = self.storyboard?.instantiateViewController(identifier: "CalendarViewController") as? CalendarViewController
-        calendar?.modalTransitionStyle = .coverVertical
-        self.present(calendar!, animated: true, completion: nil)
+        btnView("calendar", "CalendarViewController")
     }
     @IBAction func WeatherBtn(_ sender: Any){
-         let weather  = self.storyboard?.instantiateViewController(identifier: "GPSViewController") as? GPSViewController
-        weather?.modalTransitionStyle = .coverVertical
-        self.present(weather!, animated: true, completion: nil)
+        btnView("map", "GPSViewController")
     }
     @IBAction func MusicBtn(_ sender: Any) {
-         let music = self.storyboard?.instantiateViewController(identifier: "musicViewController") as? musicViewController
-        music?.modalTransitionStyle = .coverVertical
-        self.present(music!, animated: true, completion: nil)
+        btnView("play", "musicViewController")
     }
     @IBAction func memoBtn(_ sender: Any) {
-        let memoBtn = self.storyboard?.instantiateViewController(identifier: "memoViewController") as? memoViewController
-        memoBtn?.modalTransitionStyle = .coverVertical
-       self.present(memoBtn!, animated: true, completion: nil)
+        btnView("play", "memoViewController")
     }
-    
+}
+
+
+extension MainViewController {
+    func btnView(_ btn : String, _ name : String){
+        let btn = self.storyboard?.instantiateViewController(identifier: name)
+        btn?.modalTransitionStyle = .coverVertical
+        self.present(btn!, animated: true, completion: nil)
+    }
 }

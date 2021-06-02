@@ -42,7 +42,6 @@ class memoViewController : UITableViewController{
             let item = realm.objects(memoInfo.self)
             let titleItem = item[indexPath.row].title
             let contentItem = item[indexPath.row].content
-            
             cell.titleList.text = titleItem
             cell.subtitleList.text = contentItem
             
