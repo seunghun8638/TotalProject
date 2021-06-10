@@ -11,7 +11,7 @@ import RealmSwift
 
 
 class memoaddViewController: UIViewController {
-
+    
     var realm : Realm!
     
     @IBOutlet var titleText: UITextField!
@@ -20,13 +20,16 @@ class memoaddViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         realm = try! Realm()
+        
         contentText.layer.borderWidth = 0.5
         contentText.layer.borderColor = UIColor.black.cgColor
+        
         titleText.layer.borderWidth = 0.5
         titleText.layer.borderColor = UIColor.black.cgColor
+        
     }
     
-
+    
     @IBAction func cancelBtn(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -53,6 +56,7 @@ class memoaddViewController: UIViewController {
         }
     }
 }
+
 extension memoaddViewController {
     func alertMessage(_ message : String){
         let alert = UIAlertController.init(title: "알림", message: message, preferredStyle: .alert)
@@ -60,5 +64,5 @@ extension memoaddViewController {
         alert.addAction(OK)
         present(alert, animated: true, completion: nil)
     }
-
+    
 }

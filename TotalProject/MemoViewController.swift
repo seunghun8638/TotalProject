@@ -37,7 +37,7 @@ class memoViewController : UITableViewController{
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
+        
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? listcell {
             let item = realm.objects(memoInfo.self)
             let titleItem = item[indexPath.row].title
@@ -46,12 +46,12 @@ class memoViewController : UITableViewController{
             cell.subtitleList.text = contentItem
             
             return cell
-            }
-            
+        }
+        
         return UITableViewCell()
     }
-        
-
+    
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -70,7 +70,7 @@ class memoViewController : UITableViewController{
         performSegue(withIdentifier: "showDetail", sender: indexPath.row)
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         realm = try! Realm()
@@ -81,7 +81,7 @@ class memoViewController : UITableViewController{
     }
     
     
-
+    
 }
 
 class listcell : UITableViewCell{
