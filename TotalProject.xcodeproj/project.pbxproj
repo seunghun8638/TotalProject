@@ -16,7 +16,6 @@
 		E66282CD2633FE7200FABAA1 /* Glow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E66282CC2633FE7200FABAA1 /* Glow.mp3 */; };
 		E67B8D4C26529C870072F768 /* memoaddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B8D4B26529C870072F768 /* memoaddViewController.swift */; };
 		E67B8D7326551CB80072F768 /* memoDeatilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B8D7226551CB80072F768 /* memoDeatilViewController.swift */; };
-		E67B8D7526567A7B0072F768 /* calendarAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B8D7426567A7B0072F768 /* calendarAddViewController.swift */; };
 		E6C40FBA266393770017D5F8 /* alertImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C40FB9266393770017D5F8 /* alertImage.swift */; };
 		E6E32CD32625D2B600013091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CD22625D2B600013091 /* AppDelegate.swift */; };
 		E6E32CD52625D2B600013091 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E32CD42625D2B600013091 /* SceneDelegate.swift */; };
@@ -41,7 +40,6 @@
 		E66282CC2633FE7200FABAA1 /* Glow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Glow.mp3; sourceTree = "<group>"; };
 		E67B8D4B26529C870072F768 /* memoaddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoaddViewController.swift; sourceTree = "<group>"; };
 		E67B8D7226551CB80072F768 /* memoDeatilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoDeatilViewController.swift; sourceTree = "<group>"; };
-		E67B8D7426567A7B0072F768 /* calendarAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarAddViewController.swift; sourceTree = "<group>"; };
 		E6C40FB9266393770017D5F8 /* alertImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alertImage.swift; sourceTree = "<group>"; };
 		E6E32CCF2625D2B600013091 /* TotalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TotalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E32CD22625D2B600013091 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 				E6E32CD22625D2B600013091 /* AppDelegate.swift */,
 				E6E32CD42625D2B600013091 /* SceneDelegate.swift */,
 				E6E32CD82625D2B600013091 /* Main.storyboard */,
-				E67B8D7426567A7B0072F768 /* calendarAddViewController.swift */,
 				E66282C82631A1AF00FABAA1 /* ProfileDeatilViewController.swift */,
 				E67B8D7226551CB80072F768 /* memoDeatilViewController.swift */,
 				E66282B9262EF5BE00FABAA1 /* GPSViewController.swift */,
@@ -255,7 +252,6 @@
 				E6E32CD32625D2B600013091 /* AppDelegate.swift in Sources */,
 				E6E32CD52625D2B600013091 /* SceneDelegate.swift in Sources */,
 				E66282C62631992400FABAA1 /* musicViewController.swift in Sources */,
-				E67B8D7526567A7B0072F768 /* calendarAddViewController.swift in Sources */,
 				E66282C92631A1AF00FABAA1 /* ProfileDeatilViewController.swift in Sources */,
 				E6E32CF42628543300013091 /* profileViewController.swift in Sources */,
 				E67B8D4C26529C870072F768 /* memoaddViewController.swift in Sources */,

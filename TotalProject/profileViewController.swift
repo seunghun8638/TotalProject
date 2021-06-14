@@ -21,15 +21,14 @@ class profileViewController: UIViewController {
     }
     
     //이미지 추가
-    let img = UIImage(named: "luffy.jpg")
+    let img = UIImage(named: "오승훈.jpg")
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        showAnimation()//애니메이션 효과 시작
+        showAnimation()
     }
     
-    //애니메이션 기본 위치
     private func  prepareAnimation() {
         nameLabel.transform = CGAffineTransform(translationX: view.bounds.width, y: 0).scaledBy(x: 3, y: 3).rotated(by: 180)
         jobLabel.transform = CGAffineTransform(translationX: view.bounds.width, y: 0).scaledBy(x: 3, y: 3).rotated(by: 180)
@@ -38,10 +37,7 @@ class profileViewController: UIViewController {
         jobLabel.alpha = 0
     }
     
-    
-    //nameLabel , jobLabel 시간차 나타나기
-    //img 효과
-    private func showAnimation() {
+     func showAnimation() {
         UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 2, options: .allowUserInteraction, animations: {
             self.nameLabel.transform = CGAffineTransform.identity
             self.nameLabel.alpha = 1

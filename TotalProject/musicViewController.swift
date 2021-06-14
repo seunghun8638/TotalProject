@@ -26,7 +26,7 @@ class musicViewController: UIViewController ,AVAudioPlayerDelegate{
         self.navigationItem.title = "Music View"
         self.navigationItem.backButtonTitle = "Back"
         
-        AlbumImg.image = UIImage(named: "luffy.jpg")
+        AlbumImg.image = UIImage(named: "음악.jpg")
         
          audioFile = Bundle.main.url(forResource: "Glow", withExtension: "mp3")
         play()
