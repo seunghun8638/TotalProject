@@ -9,7 +9,6 @@ import UIKit
 
 class profileViewController: UIViewController {
 
-    //주요 기능 선언
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var jobLabel: UILabel!
@@ -24,6 +23,7 @@ class profileViewController: UIViewController {
     let img = UIImage(named: "오승훈.jpg")
     
     
+    //뷰가 나타나기 직전에 올라감
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showAnimation()

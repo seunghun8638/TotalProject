@@ -18,12 +18,17 @@ class memoViewController : UITableViewController{
     @IBOutlet var tableview: UITableView!
     var realm : Realm!
     
+    //새로고침을 구현
     @IBAction func reloadBtn(_ sender: Any) {
+        //테이블뷰 업데이트
         tableview.reloadData()
         realm = try! Realm()
     }
+    
+    //전체 삭제 구현
     @IBAction func deleteBtn(_ sender: Any) {
         realm = try! Realm()
+        //눌렀을 시, realm안에 값을 전체 삭제
         try! realm.write{
             realm.deleteAll()
         }

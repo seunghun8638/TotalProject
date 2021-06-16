@@ -37,6 +37,9 @@ class MainViewController: UIViewController,UITabBarControllerDelegate{
     @IBAction func memoBtn(_ sender: Any) {
         btnView("play", "memoViewController")
     }
+    @IBAction func webBtn(_ sender: Any) {
+        btnView("web", "webViewController")
+    }
 }
 
 
