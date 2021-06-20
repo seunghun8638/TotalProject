@@ -457,7 +457,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRa-FH-rtt">
-                                <rect key="frame" x="139" y="582" width="55" height="50"/>
+                                <rect key="frame" x="139" y="584" width="55" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Play">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -478,11 +478,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="B1t-nB-Sxc">
-                                <rect key="frame" x="85" y="499" width="250" height="4"/>
-                            </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFR-Rl-fuX">
-                                <rect key="frame" x="85" y="503" width="46" height="21"/>
+                                <rect key="frame" x="85" y="505" width="46" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -493,16 +490,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yw0-Da-qr7">
+                                <rect key="frame" x="83" y="454" width="254" height="10"/>
+                                <connections>
+                                    <action selector="volumeChangeBtn:" destination="3vl-y7-B7q" eventType="valueChanged" id="Gjm-pB-P54"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eVR-4A-yYw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pNd-fz-fLN" firstAttribute="top" secondItem="wnB-D3-vb7" secondAttribute="bottom" constant="139" id="2QI-oQ-rWW"/>
                             <constraint firstItem="pNd-fz-fLN" firstAttribute="centerX" secondItem="MME-9y-HWv" secondAttribute="centerX" constant="72" id="2WO-qh-P1h"/>
-                            <constraint firstItem="B1t-nB-Sxc" firstAttribute="leading" secondItem="eVR-4A-yYw" secondAttribute="leading" constant="85" id="9iT-At-i2L"/>
                             <constraint firstItem="mRa-FH-rtt" firstAttribute="leading" secondItem="eVR-4A-yYw" secondAttribute="leading" constant="139" id="Dex-Uo-c45"/>
-                            <constraint firstItem="eVR-4A-yYw" firstAttribute="trailing" secondItem="B1t-nB-Sxc" secondAttribute="trailing" constant="79" id="FtA-tX-JdO"/>
                             <constraint firstItem="D9J-of-wl7" firstAttribute="leading" secondItem="eVR-4A-yYw" secondAttribute="leading" constant="100" id="GTs-or-jpe"/>
+                            <constraint firstItem="eVR-4A-yYw" firstAttribute="trailing" secondItem="yw0-Da-qr7" secondAttribute="trailing" constant="79" id="Hw4-be-rNb"/>
                             <constraint firstItem="eVR-4A-yYw" firstAttribute="bottom" secondItem="Qlg-0K-wGO" secondAttribute="bottom" constant="78" id="I9d-mc-Egy"/>
                             <constraint firstItem="Qlg-0K-wGO" firstAttribute="leading" secondItem="eVR-4A-yYw" secondAttribute="leading" constant="100" id="IJH-Jf-6SZ"/>
                             <constraint firstItem="eVR-4A-yYw" firstAttribute="trailing" secondItem="NQr-A0-PVQ" secondAttribute="trailing" constant="123" id="Ihd-ys-iBS"/>
@@ -512,11 +514,10 @@
                             <constraint firstItem="MME-9y-HWv" firstAttribute="top" secondItem="eVR-4A-yYw" secondAttribute="top" constant="74" id="ODb-Da-A8i"/>
                             <constraint firstItem="eVR-4A-yYw" firstAttribute="trailing" secondItem="D9J-of-wl7" secondAttribute="trailing" constant="100" id="Oii-CJ-l0d"/>
                             <constraint firstItem="wnB-D3-vb7" firstAttribute="leading" secondItem="tFR-Rl-fuX" secondAttribute="trailing" constant="160" id="PHT-2p-G6C"/>
+                            <constraint firstItem="yw0-Da-qr7" firstAttribute="leading" secondItem="eVR-4A-yYw" secondAttribute="leading" constant="85" id="Pw8-pk-ytd"/>
                             <constraint firstItem="Qlg-0K-wGO" firstAttribute="centerX" secondItem="pNd-fz-fLN" secondAttribute="centerX" id="QlT-zV-rMB"/>
-                            <constraint firstItem="wnB-D3-vb7" firstAttribute="top" secondItem="B1t-nB-Sxc" secondAttribute="bottom" id="SEA-Nj-AAf"/>
                             <constraint firstItem="tFR-Rl-fuX" firstAttribute="leading" secondItem="eVR-4A-yYw" secondAttribute="leading" constant="85" id="Tpx-uq-rIs"/>
-                            <constraint firstItem="NQr-A0-PVQ" firstAttribute="top" secondItem="B1t-nB-Sxc" secondAttribute="bottom" constant="81" id="XtJ-4J-le5"/>
-                            <constraint firstItem="tFR-Rl-fuX" firstAttribute="top" secondItem="B1t-nB-Sxc" secondAttribute="bottom" id="cHv-fo-X2u"/>
+                            <constraint firstItem="yw0-Da-qr7" firstAttribute="top" secondItem="eVR-4A-yYw" secondAttribute="top" constant="410" id="Z71-Rf-Gwa"/>
                             <constraint firstItem="mRa-FH-rtt" firstAttribute="top" secondItem="tFR-Rl-fuX" secondAttribute="bottom" constant="58" id="caa-Pn-P5V"/>
                             <constraint firstItem="eVR-4A-yYw" firstAttribute="trailing" secondItem="pNd-fz-fLN" secondAttribute="trailing" constant="79" id="ce9-GW-btc"/>
                             <constraint firstItem="D9J-of-wl7" firstAttribute="top" secondItem="eVR-4A-yYw" secondAttribute="top" constant="23" id="fH3-jg-h5O"/>
@@ -525,8 +526,8 @@
                             <constraint firstItem="eVR-4A-yYw" firstAttribute="trailing" secondItem="MME-9y-HWv" secondAttribute="trailing" constant="31" id="jtS-Hp-aRL"/>
                             <constraint firstItem="eVR-4A-yYw" firstAttribute="bottom" secondItem="NQr-A0-PVQ" secondAttribute="bottom" constant="181" id="oIY-Q4-ARN"/>
                             <constraint firstItem="eVR-4A-yYw" firstAttribute="bottom" secondItem="MME-9y-HWv" secondAttribute="bottom" constant="398" id="olT-YW-grc"/>
+                            <constraint firstItem="eVR-4A-yYw" firstAttribute="bottom" secondItem="yw0-Da-qr7" secondAttribute="bottom" constant="350" id="pNF-ZQ-exJ"/>
                             <constraint firstItem="wnB-D3-vb7" firstAttribute="leading" secondItem="tFR-Rl-fuX" secondAttribute="trailing" constant="160" id="plE-W2-7eG"/>
-                            <constraint firstItem="B1t-nB-Sxc" firstAttribute="top" secondItem="MME-9y-HWv" secondAttribute="bottom" constant="84" id="u4z-UP-ddA"/>
                             <constraint firstItem="MME-9y-HWv" firstAttribute="leading" secondItem="eVR-4A-yYw" secondAttribute="leading" constant="37" id="vOg-yv-3dJ"/>
                         </constraints>
                     </view>
@@ -536,7 +537,7 @@
                         <outlet property="AlbumImg" destination="MME-9y-HWv" id="4fP-W5-i5t"/>
                         <outlet property="currentTime" destination="tFR-Rl-fuX" id="VG1-e7-YbW"/>
                         <outlet property="endTime" destination="wnB-D3-vb7" id="CHb-GP-0CR"/>
-                        <outlet property="pvProgressPlay" destination="B1t-nB-Sxc" id="Se2-KY-eI2"/>
+                        <outlet property="progressTime" destination="yw0-Da-qr7" id="NXv-qj-1ui"/>
                         <outlet property="startBtn" destination="mRa-FH-rtt" id="yX8-mL-lh8"/>
                         <outlet property="stopBtn" destination="NQr-A0-PVQ" id="Mmq-TW-CyW"/>
                         <outlet property="volumeChange" destination="pNd-fz-fLN" id="bpx-Wb-eX7"/>

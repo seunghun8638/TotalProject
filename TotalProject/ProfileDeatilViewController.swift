@@ -22,6 +22,7 @@ class ProfileDeatilViewController: UIViewController {
     @IBAction func closeBtn(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    // 테두리 및 테두리 색 지정
     func layer(_ name : UILabel){
         name.layer.borderWidth = 0.2
         name.layer.borderColor = UIColor.black.cgColor

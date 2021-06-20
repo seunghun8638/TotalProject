@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIAlertController{
-    func addImge(image : UIImage){
+    func addImage(image : UIImage){
         var image = image
         
         let size = CGSize(width:  250 , height: 200)

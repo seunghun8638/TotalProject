@@ -15,8 +15,8 @@ class musicViewController: UIViewController ,AVAudioPlayerDelegate{
     var maxVolume : Float = 10.0
     var progressT : Timer!
     
-    @IBOutlet var pvProgressPlay: UIProgressView!
-    
+    @IBOutlet weak var progressTime: UISlider!
+
     @IBOutlet var currentTime: UILabel!
     @IBOutlet var endTime: UILabel!
     
@@ -28,25 +28,26 @@ class musicViewController: UIViewController ,AVAudioPlayerDelegate{
         
         AlbumImg.image = UIImage(named: "음악.jpg")
         
-         audioFile = Bundle.main.url(forResource: "Glow", withExtension: "mp3")
-        play()
-        currentTime.text = converNSTimeInterval2String(0)
-        endTime.text = converNSTimeInterval2String(audioPlayer.duration)
+        //오디오 파일 저장
+        audioFile = Bundle.main.url(forResource: "Glow", withExtension: "mp3")
+        initplay()
+        //맨 처음 load 시, current time은 00:00 으로 나타냄
+        currentTime.text = time(0)
+        //맨 처음 load 시, end time은 오디오 파일에 총 시간
+        endTime.text = time(audioPlayer.duration)
+        
     }
     
-    func converNSTimeInterval2String(_ time : TimeInterval) -> String{
+    //time값을 float형을 Int값으로 변환하여 보여주기 위함
+    func time(_ time : TimeInterval) -> String{
         let min = Int(time/60)
         let sec = Int(time.truncatingRemainder(dividingBy: 60))
         let strTime = String(format : "%02d:%02d",min,sec)
         return strTime
     }
-    let timePlayerSelector : Selector = #selector(musicViewController.updatePlayTime)
-    @objc func updatePlayTime(){
-        currentTime.text = converNSTimeInterval2String(audioPlayer.currentTime)
-        pvProgressPlay.progress = Float(audioPlayer.currentTime/audioPlayer.duration)
-    }
     
-    func play(){
+    func initplay(){
+        //실행해서 audioplayer가 있으면 패스 없으면 에러 출력
         do{
              audioPlayer = try AVAudioPlayer(contentsOf: audioFile)
         }catch let error as NSError {
@@ -63,9 +64,20 @@ class musicViewController: UIViewController ,AVAudioPlayerDelegate{
         startBtn.isEnabled = true
         stopBtn.isEnabled = false
         
-        progressT = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: timePlayerSelector, userInfo: nil, repeats: true)
-    
+        self.progressTime.minimumValue = 0
+        self.progressTime.maximumValue = Float(self.audioPlayer.duration)
+        self.progressTime.value = Float(self.audioPlayer.currentTime)
         
+        progressT = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { progressT in
+          
+            if self.progressTime.isTracking { return }
+
+            self.currentTime.text = self.time(self.audioPlayer.currentTime)
+            self.progressTime.value = Float(self.audioPlayer.currentTime)
+        })
+        progressT.fire()
+
+
         
     }
     func setButtons(_ play:Bool , pause : Bool){
@@ -94,6 +106,8 @@ class musicViewController: UIViewController ,AVAudioPlayerDelegate{
     @IBOutlet var volumeChange: UISlider!
     @IBAction func volumeChangeBtn(_ sender: Any) {
         audioPlayer.volume = volumeChange.value
+        print("\(audioPlayer.volume)")
     }
+    
     
 }

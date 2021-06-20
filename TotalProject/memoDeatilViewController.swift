@@ -23,6 +23,7 @@ class memoDeatilViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    //메모 제목 및 내용 불러와서 title 및 content에 넣기
     func update(){
         self.loadTitel.text = Atitle!
         self.loadContent.text = AContent!

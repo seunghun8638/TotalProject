@@ -21,11 +21,11 @@ class webViewController: UIViewController {
         if sender.selectedSegmentIndex == 0 {
             webViewSite("http://www.google.com")
         }else {
-            webViewSite("http://www.naver.com")
+            webViewSite("http://www.youtube.com")
         }
     }
     
-
+    //url 값을 넣고 불러오기
     func webViewSite(_ site : String){
         let url = URL(string: site)
         let request = URLRequest(url: url!)

@@ -14,6 +14,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
     
     @IBOutlet weak var calendar: FSCalendar!
     
+    //날짜 포멧 받음
     let dateFormatter = DateFormatter()
     
     override func viewDidLoad() {
@@ -23,6 +24,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         calendar.dataSource = self
         calendar.scrollDirection = .vertical
         
+        //dataFormatter 형식을 -> 년도 월 일로 변경
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
         //color 변경 소스
@@ -33,13 +35,12 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         
         
         calendar.appearance.headerMinimumDissolvedAlpha = 0
-        
+        //캘린더 최상단 부분을 변경
         calendar.appearance.headerDateFormat = "YYYY년 M월"
-        
         
         calendar.locale = Locale(identifier: "ko_KR")
         
-        
+        //캘린더에 요일을 나타는 부분에 텍스트 변경
         calendar.calendarWeekdayView.weekdayLabels[0].text = "일"
         calendar.calendarWeekdayView.weekdayLabels[1].text = "월"
         calendar.calendarWeekdayView.weekdayLabels[2].text = "화"
