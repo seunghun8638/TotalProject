@@ -31,7 +31,7 @@ class GPSViewController: UIViewController,CLLocationManagerDelegate{
         MapView.showsUserLocation = true
         
     }
-    //위도 경도 원하는 위치 표시를 위해 goLocate 라는 함수를 사용
+    //위도 경도 원하는 위치 표시를 위해 mylocate 라는 함수를 사용
     func mylocate(latitude : CLLocationDegrees, longitude : CLLocationDegrees , span : Double) -> CLLocationCoordinate2D{
         //위도와 경도값 저장하여 가지고 있음
         let locate = CLLocationCoordinate2DMake(latitude, longitude) 

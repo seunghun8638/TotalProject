@@ -69,12 +69,12 @@ class musicViewController: UIViewController ,AVAudioPlayerDelegate{
         self.progressTime.value = Float(self.audioPlayer.currentTime)
         
         progressT = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { progressT in
-          
-            if self.progressTime.isTracking { return }
 
             self.currentTime.text = self.time(self.audioPlayer.currentTime)
             self.progressTime.value = Float(self.audioPlayer.currentTime)
         })
+        
+        //progressT -> 실행 시에 interval뒤에 시작하지만 fire 함수를 통ㄹ해 즉시 실행
         progressT.fire()
 
 
